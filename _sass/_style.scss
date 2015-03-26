@@ -56,7 +56,7 @@ p{
 .close{text-align: center;}
 .slide{
 	h3{margin: 5px 0;}
-	h3, .close{
+	h3, .close, h1{
 		cursor:pointer;
 		&:active{text-shadow: white 0 0 1px;}
 	}
