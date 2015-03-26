@@ -1,5 +1,5 @@
 $(function(){
-	$('.slide h3').click(slide);
+	$('.slide h3, .slide h1').click(slide);
 	$('.slide .close').click(close);
 	$('h3, h4, h1').each(function(){
 		$(this).css({color: randHex()});

@@ -1,7 +1,7 @@
 body{
 	background-color: #333;
 	color: #ddd;
-	font-size: 20px;
+	font-size: 24px;
 }
 h1{margin-bottom: 2rem;}
 .container{
@@ -12,11 +12,13 @@ small{
 }
 
 hr{
+	visibility: hidden;
 	margin-top: 10px;
 	margin-bottom: 80px;
 }
 
 footer{
+	border-top: 1px dashed #ddd;
 	background-color: #333;
 	position: fixed;
 	padding: 20px 0;
