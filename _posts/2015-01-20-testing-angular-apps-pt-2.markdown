@@ -10,20 +10,18 @@ will show you how to create tests for controllers, generate a new
 controller for each test, and how to test http requests. Alright, 
 lets get right into it.
 
-<span class="more"></span>
-
 So here is the controller we are going to be testing. It gets a 
 name from our location and handles posting a new calendar then
 redirect.
 
-<style>.gist{height:250px; overflow:scroll}</style>
+<style>.gist{height:250px; overflow:scroll;}</style>
 <script src="https://gist.github.com/colbydehart/157d80a9b715f78dd26e.js"></script>
 
 So let's see how we want to get our controller into our tests. Now, what we actually 
 want is a function which creates a custom scope based on what we need to test, but this
 isn't too hard in angular.
 
-```javascript
+{% highlight javascript %}
 //new.spec.js
 Describe('New Calendar', function(){
   beforeEach(module('new'));
@@ -35,8 +33,8 @@ Describe('New Calendar', function(){
       calFn = function(scp){
         return $controller('NewController', {$scope: scp})
       };
-  }));
-```
+}));
+{% endhighlight %}
 
 So here we have injected `$rootScope` into the variable `scope`, which
 will let us make new scope objects on the fly. We also made a function
@@ -44,13 +42,13 @@ which uses Angular's built-in `$controller` service so we can initialize
 the controller with a different scope per test. let's make sure we can test
 grabbing the name of the new cal out of the location first.
 
-```javascript
+{% highlight javascript %}
 it("Should pull the name from the location.", function () {
   loc.search({name:"Hello"});
   calFn(scope);
   expect(scope.event.name).to.equal("Hello");
 })
-```
+{% endhighlight %}
 
 In the controller, we grab the name from the query string and set it to the
 `event` object's name. This is a great example of why we needed a function 
@@ -63,14 +61,14 @@ This is all good, but pretty simple. What if we want to test something more
 complicated, like http requsts? Here we use `$httpBackend` to spoof a server
 and make sure our controller is sending out the POST request.
 
-```javascript
+{% highlight javascript %}
 it("should post to server on scope.createEvent", function () {
   loc.search({name:"Hello"});
   calFn(scope);
   http.expectPOST('http://some.url', { name:'Hello', participants:{} })
   scope.createEvent;
 })
-```
+{% endhighlight %}
 
 We initialize the location and controller in the same way again, but then 
 we use `$httpBackend` with the `expectPOST` request. It takes in the arguments

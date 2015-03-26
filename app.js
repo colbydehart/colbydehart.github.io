@@ -1,7 +1,7 @@
 $(function(){
 	$('.slide h3').click(slide);
 	$('.slide .close').click(close);
-	$('h3, h4').each(function(){
+	$('h3, h4, h1').each(function(){
 		$(this).css({color: randHex()});
 	});
 	$('a').each(function(){

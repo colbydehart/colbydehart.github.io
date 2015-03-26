@@ -10,8 +10,6 @@ I ended up partnering up with [Code for Nashville][CfN] with a few of my cohort
 mates from Nashville Software School. We worked on a pretty neat app called 
 NashViva.
 
-<span class="more"></span>
-
 The app was basically "A digital pocketknife for life in 
 Nashville". You pick an area in Nashville and it populates a map
 with information that you might find useful, like public wifi, parks, fire
@@ -20,12 +18,12 @@ devote working with [Leaflet][Leaf], which is a JavaScript library for easily
 making and manipulating maps. Making a map is as simple as making
 a `#map` element in your HTML and then initializing. 
 
-```javascript
+{% highlight javascript %}
 //Initialize the map
 var map = L.map('map').setView([36.165818, -86.784245], 13);
 //Add the main layer so you can see the map
 L.tileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png').addTo(map);
-```
+{% endhighlight %}
 
 There's a way to add markers and shapes and a plethora of plugins for it
 from there, but those are the basics. You can check out the the project and 

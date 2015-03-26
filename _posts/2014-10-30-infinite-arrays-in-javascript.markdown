@@ -9,18 +9,16 @@ and I had to create an infinite grid made up of nested arrays. The
 problem that I soon ran into was hooking the Array's first element to its
 last element, or tying it together so it looped.
 
-<span class="more"></span>
-
 I came up with the following helper function that will make an Array
 behave like a fixed length loop of values.
 
 
 
-```javascript
+{% highlight javascript %}
 Array.prototype.get(index){
   return this.slice(index%this.length)[0];
 }
-```
+{% endhighlight %}
 
 This might look a little confusing to you, so I'll break it down. First
 let me address the two goals of this function for it to successfully
@@ -38,7 +36,7 @@ equal to the index that is passed in, **unless** it is greater than the index
 of the last element, in which case it will loop back to the beginning of the 
 array. Look at the following example to understand.
 
-```javascript
+{% highlight javascript %}
 var arr = [1,2,3];
 2%arr.length;
 // returns 2
@@ -46,7 +44,7 @@ var arr = [1,2,3];
 // returns 0
 7%arr.length;
 // returns 1
-```
+{% endhighlight %}
 
 The next piece of this puzzle is the `slice` function here. Slice returns an
 array of the array it is called from starting at the first argument with an
@@ -63,7 +61,7 @@ check if a value exists at a certain index with this because it will
 **always** return a value in the array. Hope you find this useful and a 
 few demonstrations of its behavior is below.
 
-```javascript
+{% highlight javascript %}
 var arr = ['My','very','eager','mother'];
 
 arr.get(0);
@@ -79,6 +77,6 @@ arr.get(6);
 arr.get(-3);
 //returns 'very'
 
-```
+{% endhighlight %}
 
 [gol]:http://en.wikipedia.org/wiki/Conway's_Game_of_Life

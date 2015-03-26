@@ -9,12 +9,12 @@ You can write simple scripts in your `package.json` for your projects that
 will run simple commands like `jshint *.js` or `karma start`, but you can 
 also write your own js scripts and run them with node so that 
 `npm run new_post` will run `node ./scripts/new_post.js` for anything you
-need.<span class="more"></span>
+need.
 
 Here is the simple script I wrote to make a new post in 
 [Wintersmith](http://wintersmith.io/). 
 
-```javascript
+{% highlight javascript %}
 var fs = require('fs'),
     prompt = require('prompt'),
     path = require('path'),
@@ -51,18 +51,20 @@ function printDate(){
 
     return res;
 }
-```
+{% endhighlight %}
+
 I prompt the user (myself) for a title, then create a directory
 that is named the title in snake case. Then I create some Yaml 
 front matter for the post and write it in a file in the new folder
 called `index.markdown`. I have this script loaded in a folder in my
 root named `scripts` and then in my package.json I have.
 
-```json
+{% highlight json %}
 "scripts": {
     "new_post": "node bin/new_post"
 }
-```
+{% endhighlight %}
+
 Now whenever I want to make a new post, i just run `npm run new_post` and
 I am prompted for a title and all of the directory making and front matter
 generation is handled for me. Using this method is great for one-off tasks

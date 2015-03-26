@@ -4,6 +4,9 @@ title: "Functional JavaScript with Lodash"
 date: 2015-3-8
 categories: lodash JavaScript functional programming
 ---
+EDIT: I've redone my whole website since this post, so the game is no longer
+on here, but you can check it out by looking at the code.
+
 I've been getting into breaking functions down into 
 smaller chunks and write more functional type JavaScript. 
 This was prompted by wanting to learn and utilize [lodash](https://lodash.com/)
@@ -11,9 +14,9 @@ better as well as I have been teaching myself Python, which
 highly values collection manipulation and more compressed, 
 functional type methods. So inspired by pythonic coding, I
 wrote a the classic game **snake** in Javascript with lodash.
-<span class="more"></span>
 
-You can see [the game here](/about.html) and [the script here.](/app.js). I will be referencing it throughout
+You can see [the game here](https://github.com/colbydehart/colbydehart/blob/master/contents/app.js).
+I will be referencing it throughout
 the rest of the post. Now this post title is a bit misleading, the code I wrote
 isn't super functional, but some parts of it do emphasize how utilizing set theory
 can help write more concise code. Whatever, let's have a look.

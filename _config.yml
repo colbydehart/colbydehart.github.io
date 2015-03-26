@@ -8,8 +8,10 @@ github_username:  colbydehart
 
 highlighter: pygments
 
-paginate: 8
+paginate: 10
 paginate_path: "/:num"
+
+permalink: /:title
 
 # Build settings
 markdown: kramdown

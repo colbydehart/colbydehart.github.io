@@ -3,12 +3,17 @@ body{
 	color: #ddd;
 	font-size: 20px;
 }
+h1{margin-bottom: 2rem;}
 .container{
-	padding: 0 10%;
+	padding: 3rem 10%;
+}
+small{
+	font-size: 0.5em;
 }
 
 hr{
 	margin-top: 10px;
+	margin-bottom: 80px;
 }
 
 footer{
@@ -46,14 +51,15 @@ p{
 }
 
 
+.close{text-align: center;}
 .slide{
 	h3{margin: 5px 0;}
-	.close{text-align: center;}
 	h3, .close{
 		cursor:pointer;
 		&:active{text-shadow: white 0 0 1px;}
 	}
 	border-top: 1px solid #666;
+	&:first-child{border-top:0;}
 	border-bottom: 1px solid #666;
 	.content{display:none;padding-bottom:30px;}
 }
@@ -61,5 +67,5 @@ p{
 
 
 @media screen and (max-width: 880px){
-	.container{padding: 0 5px;}
+	.container{padding: 3rem 5px;}
 }

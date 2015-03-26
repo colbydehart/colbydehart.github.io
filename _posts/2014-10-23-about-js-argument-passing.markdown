@@ -16,7 +16,7 @@ alter its contents.
 
 Take the following code for example...
 
-```javascript
+{% highlight javascript %}
 var primitiveVariable = 1,
     objectVariable = {value:1};
 function mutate(someVariable){
@@ -30,7 +30,7 @@ console.log(primitiveVariable);
 //  logs 1, the original value
 console.log(objectVariable.value);
 // logs 2, which has been changed
-```
+{% endhighlight %}
 
 This behaves this way because JavaScript does not pass arguments
 as reference or value every time. It follows a convention called

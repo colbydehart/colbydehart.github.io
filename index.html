@@ -3,9 +3,6 @@ layout: default
 ---
 
 <div class="container">
-  <div id="stars">
-    <div class="star">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="last">&nbsp;</span></div>
-  </div>
   <div class="slide">
     <h3>ColbyDehart.com</h3>
     <div class="content">
@@ -29,7 +26,7 @@ layout: default
   </div>
   {% for post in paginator.posts %}
     <div class="slide">
-        <h3>{{post.title}}</h3>
+        <h3>{{post.title}}<small> :: <a href="{{post.url}}">Permalink</a></small></h3>
         <div class="content">
           {{post.content}}
           <h4 class="close">Close</h3>
@@ -64,7 +61,5 @@ layout: default
   </div>
   {% endif %}
   
-  <hr>
 </div>
 
-<footer>Made with <img src="images/bowing.png" height="22" width="22"> by Colby DeHart</footer>

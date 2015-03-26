@@ -10,8 +10,6 @@ I've been building my capstone project for NSS with it and it has been going gre
 At first I had a few hiccups trying to test it, but Google has made Angular
 easy to test once you figure out the basics of injecting your modules into your tests.
 
-<span class="more"></span>
-
 I'm going to assume you've set up karma and mocha and focus on how to use Angular
 in your tests. if you haven't there are many tutorials out there to show you how 
 to set up a test environment and you can also check out my 
@@ -26,15 +24,18 @@ a bit more complicated to test, but I will go over them in part 2 of this.
 This factory handles creating and merging calendars for participants of a group event.
 Now to test it, we need to include this module in our test. This is pretty easy as
 long as you have included angular-mocks in your Karma config.
-```javascript
+
+{% highlight javascript %}
 //calFactory.spec.js
 Describe('Calendar Factory', function(){
   beforeEach(module('calFactory'));
   ...
-```
+{% endhighlight %}
+
 So here we use the function `module` provided my angular-mocks to inject the module.
 now we need to use Angular's injector to give us our actual factory.
-```javascript
+
+{% highlight javascript %}
 var $cal;
 beforeEach(inject(function(cal) {
   $cal = cal;
@@ -42,7 +43,7 @@ beforeEach(inject(function(cal) {
 it("should exist", function(){
   $cal.should.exist;
 });
-```
+{% endhighlight %}
 
 The inject function will give us access to the Angular injector, just like in the
 initialization function of a controller or factory. Here we inject `cal`, which is
@@ -52,7 +53,7 @@ more than just that. If our module breaks or our factory is unable to be built, 
 test will fail. A simple test like this for all of your modules will be able to quickly alert
 you if your app breaks. But we want more than that, so let's test some functionality.
 
-```javascript
+{% highlight javascript %}
 function createCal() {
   var firstDay = new Date(),
       firstDayHolder = _.cloneDeep(firstDay),
@@ -74,8 +75,7 @@ it("should be able to make date objects", function(){
   var dates = $cal.convertDates(calendar);
   dates[0].should.be.an.instanceOf(Date);
 });
-
-```
+{% endhighlight %}
 
 So I make a utility function to create a week long calendar with my factory. 
 Then I test that it creates the proper lengt calendar with the correct keys.

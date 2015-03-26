@@ -11,18 +11,16 @@ in a 2-dimensional array, if a cell exists. If the outer array did not
 exist though, the program would fail if I tried to grab the inner array
 from the undefined value.
 
-<span class="more"></span>
-
 So `2dArray[invalidValue][somOtherValue]` would crash my JavaScript. 
 Instead of setting up an if statement to check if they outer array exists
 and then the inner aray exists every time I wished to operate on the grid,
 i wrote the following little function.
 
-```javascript
+{% highlight javascript %}
 function cellExists(x,y){
   return 2dArray[y] && 2dArray[y][x];
 }
-```
+{% endhighlight %}
 
 Now when this function receives an invalid grid cell, it will return false
 without crashing the program, but to my surprise it will return the actual
@@ -32,11 +30,11 @@ to see if a cell exists so I could grab a property out of it.
 So grabbing that property could more simply be...
 
 
-```javascript
+{% highlight javascript %}
 function getSomeProp(x,y){
   2dArray[y] && 2dArray[y][x] && 2dArray[y][x].someProp;
 }
-```
+{% endhighlight %}
 
 You can also use boolean values like this when assigning variables. If you
 `&&` it will return the last value if both values of true and if you use 
@@ -44,7 +42,7 @@ You can also use boolean values like this when assigning variables. If you
 the first is false, or false if neither are. Below I have some examples.
 
  
-```javascript
+{% highlight javascript %}
 var foo = someFlag && someVal;
 //only sets foo to someVal if someFlag is true
 var bar = falseValue || trueValue;
@@ -52,4 +50,4 @@ var bar = falseValue || trueValue;
 var baz = baz || "value not found"
 //if baz is undefined or a false value,
 //sets itself to "value not found"
-```
+{% endhighlight %}

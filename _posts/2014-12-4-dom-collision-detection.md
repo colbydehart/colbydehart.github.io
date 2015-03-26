@@ -11,11 +11,10 @@ sure that when I was placing my ships in the game that
 they could not overlap, therefore had to figure out 
 collision detection in the DOM.
 
-<span class="more"></span>
 
 This is the function in its entirety.
 
-```javascript
+{% highlight javascript %}
 function willCollide(block) {
   var top = block.offset().top,
       left = block.offset().left,
@@ -37,7 +36,7 @@ function willCollide(block) {
   });
   return result;
 }
-```
+{% endhighlight %}
 
 This function takes in a `block`, which is just a DOM
 element (I'm using jQuery here). My blocks are just 
@@ -56,12 +55,12 @@ top, left, right, and bottom exactly how I did at the
 top of the function. Then it gets a little weird with
 this if statement:
 
-```javascript
+{% highlight javascript %}
 if (!(top >= blockBottom || bottom <= blockTop ||
     left >= blockRight || right <= blockLeft)){
       result = true;
 }
-```
+{% endhighlight %}
 
 Okay, so lets break this down. Since I'm comparing two
 blocks and saying 'block' over and over again is going
@@ -70,9 +69,9 @@ that was passed into the function the mainBlock and the
 block that is currently being compared in the for loop
 the currentBlock. Alright.
 
-```
+{% highlight javascript %}
 top >= blockBottom || bottom <= blockTop
-```
+{% endhighlight %}
 
 Keep in mind that height increases as it goes
 down in DOM coordinates. So we see if the top of the 
@@ -83,10 +82,10 @@ than there is no way that the blocks could overlap
 each other vertically, but we don't know anything about
 horizontal collision. That's where the next line comes in.
 
-```
+{% highlight javascript %}
 (!(top >= blockBottom || bottom <= blockTop ||
 left >= blockRight || right <= blockLeft))
-```
+{% endhighlight %}
 
 The left and right check do the same as the top and bottom
 then we wrap the whole conditional up in parenthesis a negate
