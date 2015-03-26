@@ -1,0 +1,15 @@
+# Site settings
+title: Colby Dehart
+email: colbydehart@gmail.com
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://colbydehart.com" # the base hostname & protocol for your site
+twitter_username: colbydehart
+github_username:  colbydehart
+
+highlighter: pygments
+
+paginate: 8
+paginate_path: "/:num"
+
+# Build settings
+markdown: kramdown
