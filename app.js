@@ -19,6 +19,9 @@ function slide(e){
 }
 
 function randHex(){
-	var num = Math.floor(Math.random()*8777215+8000000);
-	return '#'+num.toString(16);
+	var res = '#'
+	for(var i = 0; i < 3; i++){
+		res += Math.floor(Math.random()*128+128).toString(16);
+	}
+	return res;
 }
