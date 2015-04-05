@@ -6,6 +6,10 @@ body{
 h1{margin-bottom: 2rem;}
 .container{
 	padding: 3rem 10%;
+	img{
+		width : 60%;
+		padding: 0 20%;
+	}
 }
 small{
 	font-size: 0.5em;
@@ -69,5 +73,11 @@ p{
 
 
 @media screen and (max-width: 880px){
-	.container{padding: 3rem 5px;}
+	.container{
+		padding: 3rem 5px;
+		img{
+			width: 90%;
+			padding:0 5%;
+		}
+	}
 }
