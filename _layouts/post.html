@@ -6,6 +6,7 @@
   <body>
 	<div class="container">
 		<h1><a href="/">{{page.title}}</a></h1>
+        <p>-{{page.date | date_to_string }}-</p>
 	    {{ content }}
         <h4 class="close"><a href="/">Go back</a></h3>
 

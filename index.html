@@ -25,7 +25,10 @@ layout: default
   </div>
   {% for post in paginator.posts %}
     <div class="slide">
-        <h3>{{post.title}}<small> :: <a href="{{post.url}}">Permalink</a></small></h3>
+        <h3>{{post.title}}<small> ::
+        <a href="{{post.url}}">Permalink</a>
+        - {{post.date | date_to_string}}
+        </small></h3>
         <div class="content">
           {{post.content}}
           <h4 class="close">Close</h3>
