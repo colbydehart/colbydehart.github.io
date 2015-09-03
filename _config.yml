@@ -32,6 +32,10 @@ prose:
         field:
           element: "hidden"
           value: "post"
+      - name "title"
+        field:
+          element: "text"
+          value: "title"
       - name: "tags"
         field:
           element: "multiselect"
