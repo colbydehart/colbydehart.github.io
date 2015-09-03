@@ -32,7 +32,7 @@ prose:
         field:
           element: "hidden"
           value: "post"
-      - name "title"
+      - name: "title"
         field:
           element: "text"
           value: "title"
