@@ -2,7 +2,7 @@
 layout: post
 tags: 
   - "null"
-published: false
+published: true
 title: Remote Debugging PHP in vim
 ---
 
