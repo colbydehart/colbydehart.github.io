@@ -3,8 +3,9 @@ layout: post
 tags: 
   - "null"
 published: true
-title: Remote Debugging PHP in vim
+title: Remote PHP Debugging in Vim
 ---
+
 
 
 I love vim. Most people who use vim feel the same. It feels pure and simple. The commands make sense (after you learn them) and everything is configurable through plaintext files. It's not for some people but for me it's everything I need. Well, almost everything I need.
