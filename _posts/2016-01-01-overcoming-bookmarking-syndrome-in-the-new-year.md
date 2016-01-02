@@ -1,7 +1,5 @@
 ---
 layout: post
-tags: 
-  - "null"
 published: true
 title: Overcoming Bookmarking Syndrome in the New Year
 ---
@@ -20,4 +18,4 @@ iliadic [Bloomberg article](http://www.bloomberg.com/graphics/2015-paul-ford-wha
 
 It is important because I really want to keep learning. I want to learn new languages. I want to learn how to build an AI that plays Street Fighter. I want to build my own digital synthesizer. I want to never again be bamboozled by what `git` command I want. I want to learn to make new things and how to distribute and deploy them. And I don't want to get scared by the amount of stuff I want to learn.
 
-I feel this 'bookmarking-syndrome' puts too much confidence on a mythical 'one day' and is a poor coping mechanism for dealing with information overload. Maybe something like clearing out a bunch of bookmarks and a video playlist may seem trivial, but for me right now it's kind of important that I don't keep forming a habit of being so overwhelmed by all that I don't know that I don't even try to learn and instead start clearing off my feeds, tinkering around with new tools, and grokking in the new year.
+I feel this 'bookmarking-syndrome' puts too much confidence on a mythical 'one day' and is a poor coping mechanism for dealing with information overload. Maybe something like clearing out a bunch of bookmarks and a video playlist may seem trivial, but for me right now it's kind of important that I don't keep forming a habit of being so overwhelmed by all that I don't know that I don't even try to learn, and instead start clearing off my feeds, tinkering around with new tools, and grokking in the new year.
