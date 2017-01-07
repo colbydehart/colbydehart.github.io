@@ -6,7 +6,7 @@ url: "http://colbydehart.com" # the base hostname & protocol for your site
 twitter_username: colbydehart
 github_username:  colbydehart
 
-highlighter: pygments
+highlighter: rouge
 
 paginate: 10
 paginate_path: "/:num"
@@ -15,6 +15,8 @@ permalink: /:title
 
 # Build settings
 markdown: kramdown
+
+gems: [jekyll-paginate]
 
 # Prose stuff
 prose:
@@ -36,16 +38,6 @@ prose:
         field:
           element: "text"
           value: "title"
-      - name: "tags"
-        field:
-          element: "multiselect"
-          label: "Add Tags"
-          placeholder: "Choose Tags"
-          options:
-            - name: "Apples"
-              value: "apples"
-            - name: "Bananas"
-              value: "bananas"
     _posts/static:
       - name: "layout"
         field:
