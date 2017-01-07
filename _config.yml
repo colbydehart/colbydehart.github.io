@@ -5,6 +5,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://colbydehart.com" # the base hostname & protocol for your site
 twitter_username: colbydehart
 github_username:  colbydehart
+description: "Colby Dehart's Web Dev Blog"
 
 highlighter: rouge
 

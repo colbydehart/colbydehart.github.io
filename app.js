@@ -19,7 +19,7 @@ function slide (e) {
 }
 
 function randHex () {
-  var hexes = '1234567890ABCDEF'.split('')
+  var hexes = '9ABCDEF'.split('')
   var res = '#'
   for (var i = 0; i < 6; i++) {
     res += hexes[Math.floor(Math.random() * hexes.length)]

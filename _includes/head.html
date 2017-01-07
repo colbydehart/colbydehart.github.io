@@ -11,8 +11,22 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@colbydehart" />
-<meta name="twitter:title" content="Colby DeHart" />
-<meta name="twitter:description" content="Web Development Blog" />
+{% if page.content %}
+  <meta name="twitter:description" content="{{ page.content | strip_html |
+  xml_escape | truncate: 200 }}">
+{% else %}
+  <meta name="twitter:description" content="{{ site.description }}">
+{% endif %}
+{% if page.title %}
+  <meta name="twitter:title" content="{{ page.title }}">
+{% else %}
+  <meta name="twitter:title" content="{{ site.title }}">
+{% endif %}
+{% if page.url %}
+  <meta name="twitter:url" content="{{ site.url }}{{ page.url }}">
+{% else %}
+  <meta name="twitter:url" content="{{ site.url }}">
+{% endif %}
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
