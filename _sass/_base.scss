@@ -8,6 +8,10 @@ dl, dd, figure {
     padding: 0;
 }
 
+.container {
+  line-height: 1.6rem;
+}
+
 
 
 /**
@@ -29,25 +33,24 @@ img {
 /**
  * Code formatting
  */
-pre,
-code {
-    font-size: 20px;
+pre.highlight {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #222;
+    margin-bottom: 1rem;
+}
+
+code.highlighter-rouge {
+    border: 1px solid $grey-color-light;
+    border-radius: 3px;
+    font-size: 22px;
 }
 
 code {
     padding: 1px 5px;
 }
 
-pre.highlight {
-    background: black;
-}
-
 pre {
     padding: 8px 12px;
-    overflow-x: scroll;
 
     > code {
         border: 0;
