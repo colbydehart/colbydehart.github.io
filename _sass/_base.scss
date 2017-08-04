@@ -37,6 +37,7 @@ pre.highlight {
     border: 1px solid $grey-color-light;
     border-radius: 3px;
     margin-bottom: 1rem;
+    overflow-x: scroll;
 }
 
 code.highlighter-rouge {
